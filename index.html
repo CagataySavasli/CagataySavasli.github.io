@@ -64,6 +64,49 @@
       color: #ffcc00;
     }
 
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 20px;
+      width: 25px;
+    }
+    .hamburger div {
+      height: 3px;
+      background-color: #fff;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header nav ul {
+        display: none;
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100%;
+      }
+      header nav ul li {
+        margin: 10px 0;
+      }
+      header nav ul li a {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        background-color: #007acc;
+        color: white;
+      }
+      .hamburger {
+        display: flex;
+      }
+      header nav ul.show {
+        display: flex;
+      }
+    }
+
     /* Hero Section */
     .hero {
       background: #f4f4f4;
@@ -131,9 +174,6 @@
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-      }
       header nav ul {
         flex-direction: column;
         margin-top: 10px;
@@ -177,8 +217,13 @@
       <div class="logo">
         <a href="#home">Çağatay Savaşlı</a>
       </div>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <nav>
-        <ul>
+        <ul id="nav-list">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -374,5 +419,11 @@
   <footer>
     <p>&copy; 2025 Ahmet Çağatay Savaşlı. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('nav-list').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
