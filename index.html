@@ -1,9 +1,22 @@
----
-layout: default
-title: Home
----
-<section class="hero" style="text-align: center;">
-  <img src="images/pp.jpeg" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid #007acc;">
-  <h1>Ahmet Çağatay Savaşlı</h1>
-  <p>Software Engineer | AI Researcher | Machine Learning Enthusiast</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmet Çağatay Savaşlı - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  {% include _header.html %}
+  {% include _hero.html %}
+  {% include _about.html %}
+  {% include _experience.html %}
+  {% include _education.html %}
+  {% include _projects.html %}
+  {% include _publications.html %}
+  {% include _skills.html %}
+  {% include _contact.html %}
+  {% include _footer.html %}
+</body>
+</html>
