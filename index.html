@@ -1,328 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ahmet Çağatay Savaşlı - Portfolio</title>
-  <meta name="description" content="Portfolio of Ahmet Çağatay Savaşlı: AI Researcher & Software Engineer skilled in ML, NLP, and Finance applications." />
-  <meta name="keywords" content="AI, Machine Learning, NLP, Finance, Software Engineer, Portfolio" />
-  <meta property="og:title" content="Ahmet Çağatay Savaşlı - Portfolio" />
-  <meta property="og:description" content="Explore my AI research, software projects, and publications." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://cagataysavasli.github.io/" />
-  <meta property="og:image" content="https://cagataysavasli.github.io/og-image.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
-  <style>
-    /* CSS Variables */
-    :root { --primary: #007acc; --background: #fff; --text: #333; --muted: #777; --btn-bg: var(--primary); --btn-color: #fff; }
-    html { scroll-behavior: smooth; }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Open Sans', sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    .btn { display: inline-block; padding: 8px 16px; background: var(--btn-bg); color: var(--btn-color); border-radius: 4px; font-weight: 600; }
-    .btn:hover { background: #005fa3; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Çağatay Savaşlı | AI & Computational Finance Researcher</title>
+    <meta name="description" content="Academic portfolio of Ahmet Çağatay Savaşlı, M.Sc. student in AI specializing in Computational Finance and NLP.">
 
-    /* Header */
-    header { background: var(--primary); color: #fff; padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
-    header .container { width: 90%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .logo a { font-size: 1.5rem; font-weight: 600; }
-    nav ul { list-style: none; display: flex; }
-    nav li { margin-left: 20px; }
-    nav li a:hover { color: #ffcc00; }
-    .hamburger { display: none; cursor: pointer; flex-direction: column; justify-content: space-between; height: 20px; width: 25px; }
-    .hamburger div { height: 3px; background-color: #fff; }
-    @media (max-width: 768px) {
-      nav ul { display: none; flex-direction: column; width: 100%; margin-top: 20px; }
-      nav ul.show { display: flex; }
-      .hamburger { display: flex; }
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* Hero */
-    .hero { background: #f4f4f4; padding: 100px 0 60px; text-align: center; margin-top: 80px; }
-    .hero img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--primary); }
-    .hero h1 { margin: 20px 0 10px; font-size: 2.5rem; }
-    .hero p { font-size: 1.2rem; }
-
-    /* Sections */
-    section { padding: 60px 0; }
-    .container { width: 90%; margin: 0 auto; }
-    .section-title { text-align: center; margin-bottom: 20px; }
-    .section-title h2 { font-size: 2rem; margin-bottom: 10px; }
-    .section-title p { font-size: 1rem; color: var(--muted); }
-
-    /* Research Areas */
-    .research-area { text-align: center; }
-    .research-area ul { display: inline-block; list-style: none; padding: 0; margin: 0; }
-    .research-area li { margin: 10px 0; }
-
-    /* Content Items */
-    .content { max-width: 800px; margin: 0 auto; }
-    .item { margin-bottom: 20px; }
-    .item h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 5px; }
-    .item span { font-size: 0.9rem; color: var(--text); }
-
-    /* Skills */
-    .skill { margin-bottom: 15px; }
-    .skill span { display: block; margin-bottom: 5px; font-weight: 600; }
-    .progress { background: var(--muted); border-radius: 4px; overflow: hidden; }
-    .progress-bar { height: 8px; background: var(--primary); }
-
-    /* Contact Icons */
-    .contact-icons { text-align: center; }
-    .contact-icons a { margin: 0 15px; font-size: 2rem; color: var(--text); transition: color 0.3s; }
-    .contact-icons a:hover { color: var(--primary); }
-
-    /* Footer */
-    footer { background: #333; color: #fff; text-align: center; padding: 20px 0; }
-    .footer-download { margin-top: 10px; }
-  </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo"><a href="#home">Çağatay Savaşlı</a></div>
-      <div>
-        <a href="#" class="btn" style="visibility:hidden;">Placeholder</a>
-        <div class="hamburger" id="hamburger"><div></div><div></div><div></div></div>
-      </div>
-      <nav>
-        <ul id="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-   <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container">
-      <img src="pp.jpeg" alt="Profile Picture" />
-      <h1>Ahmet Çağatay Savaşlı</h1>
-      <p>Software Engineer | AI Researcher | Machine Learning Enthusiast</p>
-    </div>
-  </section>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">A.Ç. Savasli</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact" class="btn-primary">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-  <!-- About Section -->
-  <section id="about" data-aos="fade-up">
-    <div class="container">
-      <div class="section-title">
-        <h2>About Me</h2>
-        <p>
-          Welcome to my personal website! I am a passionate software engineer and AI researcher with a strong background in computer science and artificial intelligence. I love solving complex problems and creating innovative solutions in machine learning and NLP.
-        </p>
-      </div>
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Çağatay Savaşlı</span></h1>
+                <h2>M.Sc. Student in AI & Computational Finance</h2>
+                <p>
+                    Specializing in Natural Language Processing (NLP) and Machine Learning applications in the financial domain.
+                    Currently researching at Özyeğin University & TUBITAK.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                    <a href="cv.pdf" target="_blank" class="btn btn-filled"><i class="fas fa-download"></i> Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/img/pp.jpeg" alt="Ahmet Çağatay Savaşlı">
+            </div>
+        </div>
+    </header>
 
-      <!-- Research Area Section -->
-      <div class="research-area" data-aos="fade-up">
-        <h3>Research Areas</h3>
-        <ul>
-          <li>Machine Learning in Finance</li>
-          <li>Natural Language Processing in Finance</li>
-          <li>Graph Representation of Textual Data</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I am a Research Assistant and M.Sc. student in Artificial Intelligence at Özyeğin University, Istanbul.
+                        My academic focus lies at the intersection of <strong>Finance and AI</strong>, specifically utilizing Large Language Models (LLMs)
+                        and Graph Representation to analyze financial documents and predict market trends.
+                    </p>
+                    <p>
+                        With a background in Computer Science and hands-on experience in robotics algorithms and genomic data analysis,
+                        I aim to bridge the gap between complex data structures and actionable financial insights.
+                    </p>
+                </div>
+                <div class="skills-wrapper">
+                    <h3>Technical Proficiency</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">NLP (LLMs)</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Computational Finance</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Graph Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Education Section -->
-  <section id="education" data-aos="fade-up">
-    <div class="container">
-      <div class="section-title">
-        <h2>Education</h2>
-      </div>
-      <div class="content">
-        <div class="item">
-          <h3>M.Sc. in Artificial Intelligence</h3>
-          <span>Özyeğin University, Istanbul, TURKEY | 2023 - Current</span>
-          <p>Focus: Machine Learning in Finance, NLP Applications in Finance</p>
-        </div>
-        <div class="item">
-          <h3>B.Sc. in Computer Science (Artificial Intelligence Track)</h3>
-          <span>Özyeğin University, Istanbul, TURKEY | 2017 - 2023</span>
-          <p>
-            Thesis: <em>MergerBERT: Predicting Mergers &amp; Non-Mergers from Text using Pretrained Language Models</em>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
 
-  <!-- Experience Section -->
-  <section id="experience" data-aos="fade-up">
-    <div class="container">
-      <div class="section-title">
-        <h2>Experience</h2>
-      </div>
-      <div class="content">
-        <div class="item">
-          <h3>Graduate Teaching Assistant at Özyegin University</h3>
-          <span>Oct 2023 - Present, Istanbul, TURKEY</span>
-          <p>
-            Supporting course instruction by assisting in lectures, grading exams, and proctoring tests to ensure a smooth learning and assessment process.
-          </p>
-        </div>
-        <div class="item">
-          <h3>Researcher at OzU-MLFinBio Lab</h3>
-          <span>Oct 2023 - Present, Istanbul, TURKEY</span>
-          <p>
-            Creating AI models that leverage large language models to analyze financial documents and predict actions with financial implications.
-          </p>
-        </div>
-        <div class="item">
-          <h3>TUBITAK Researcher</h3>
-          <span>Oct 2023 - Present, Istanbul, TURKEY</span>
-          <p>
-            Contributing to the Deepgenome project to reveal and analyze the three-dimensional structure of the genome using deep learning.
-          </p>
-        </div>
-        <div class="item">
-          <h3>Support Staff at Özyegin University</h3>
-          <span>Nov 2022 - Jun 2023, Istanbul, TURKEY</span>
-          <p>
-            Collected, organized, and transferred data to ensure smooth system operations.
-          </p>
-        </div>
-        <div class="item">
-          <h3>Software Engineer Intern at Nettsi Informatics Technology</h3>
-          <span>Jul 2021 - Sep 2021, Istanbul, TURKEY</span>
-          <p>
-            Developed a networking project using C++, Python, and WireShark; implemented data analysis on pcap files to reduce processing time by 66%.
-          </p>
-        </div>
-        <div class="item">
-          <h3>OzU Rover Team</h3>
-          <span>2018 - 2022, Istanbul, TURKEY</span>
-          <p>
-            Held various roles including Head of Robotic Arm Division, Arm Division Leader, and Software Developer in developing autonomous rover systems.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Research Assistant & M.Sc. Candidate</h3>
+                        <h4>Özyeğin University | OzU-MLFinBio Lab</h4>
+                        <p>Developing AI models leveraging LLMs for financial document analysis and predicting actions with financial implications.</p>
+                    </div>
+                </div>
 
-  <!-- Projects Section -->
-  <section id="projects" data-aos="fade-up">
-    <div class="container">
-      <div class="section-title">
-        <h2>Projects &amp; Competitions</h2>
-      </div>
-      <div class="content">
-        <div class="item">
-          <h3>GitHub Projects</h3>
-          <p>
-            Explore my work on
-            <a href="https://github.com/CagataySavasli" target="_blank" style="color: #007bff; text-decoration: underline; font-weight: bold;">GitHub</a>.
-          </p>
-        </div>
-        <div class="item">
-          <h3>CryptoCapade</h3>
-          <p>
-            Unlock the world of cryptocurrency analysis with our user-friendly Streamlit app—designed to empower anyone with intuitive, statistical tools and dynamic visualizations. Dive into crypto data effortlessly and make informed investment decisions, all while having fun!
-          </p>         <p>
-            For try:
-            <a href="" target="_blank" style="color: #007bff; text-decoration: underline; font-weight: bold;">CryptoCapade Live App</a>.
-          </p>
-        </div>
-        <div class="item">
-          <h3>LazyLoader-GDELT</h3>
-          <p>
-            LazyLoader-GDELT is a playful, Streamlit-based application that lets even non-coders effortlessly download and filter GDELT data.
-          </p>         <p>
-            For try:
-            <a href="https://lazyloader-gdelt.streamlit.app" target="_blank" style="color: #007bff; text-decoration: underline; font-weight: bold;">LazyLoader-GDELT Live App</a>.
-          </p>
-        </div>
-        <div class="item">
-          <h3>JobJitsu</h3>
-          <p>
-            JobJitsu is an open-source Streamlit app that brings together those tricky interview brain games into one fun and interactive platform. It allows candidates to practice and sharpen their problem-solving skills, boosting confidence and reducing interview stress—all for free!
-          </p>         <p>
-            For try:
-            <a href="https://cagataysavasli-jobjitsu-main-yhdmyr.streamlit.app/" target="_blank" style="color: #007bff; text-decoration: underline; font-weight: bold;">JobJitsu Live App</a>.
-          </p>
-        </div>
-        <div class="item">
-          <h3>Yandex Music Hackathon - Project APOLLO</h3>
-          <p>
-            Developed a location-linked music sharing app and received the Honor Team Prize Award among 14+ teams.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Researcher</h3>
+                        <h4>TUBITAK (Project Deepgenome)</h4>
+                        <p>Analyzing 3D genome structures using deep learning techniques.</p>
+                    </div>
+                </div>
 
-  <!-- Publications Section -->
-  <section id="publications" data-aos="fade-up">
-    <div class="container">
-      <div class="section-title">
-        <h2>Publications</h2>
-      </div>
-      <div class="content">
-        <div class="item">
-          <h3>Comparative Analysis of the Strategies Used in Planetary Rovers' Autonomous Locomotion</h3>
-          <span>Turkey Robotics Conference, 2019</span>
+                <div class="timeline-item">
+                    <div class="timeline-date">2017 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>B.Sc. in Computer Science (AI Track)</h3>
+                        <h4>Özyeğin University</h4>
+                        <p>Thesis: "MergerBERT: Predicting Mergers & Non-Mergers from Text via Pretrained Language Models."</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Jul 2021 - Sep 2021</div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer Intern</h3>
+                        <h4>Nettsi Informatics Technology</h4>
+                        <p>Developed networking projects using C++, Python, and WireShark; optimized pcap file analysis reducing time by 66%.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="item">
-          <h3>Performance Analysis of Meta-Learning Based Bayesian Deep Kernel Transfer Methods for Regression Tasks</h3>
-          <span>IEEE Sinyal İşleme ve İletişim Uygulamaları Kurultayı, 2023</span>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>CryptoCapade</h3>
+                    <p>A user-friendly Streamlit app for cryptocurrency analysis with statistical tools and dynamic visualizations.</p>
+                    <div class="card-links">
+                        <a href="#" target="_blank">View Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h3>OzU Rover Team</h3>
+                    <p>Head of Robotic Arm Division. Developed algorithms for serial communication and multi-concept controlling methods for the rover manipulator.</p>
+                    <div class="card-links">
+                        <span>Ranked 8th in ERC 2020</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3>LazyLoader-GDELT</h3>
+                    <p>Streamlit-based application for effortless downloading and filtering of GDELT data for non-coders.</p>
+                    <div class="card-links">
+                        <a href="https://lazyloader-gdelt.streamlit.app" target="_blank">View App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                 <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h3>JobJitsu</h3>
+                    <p>Interactive interview preparation platform gathering brain games to sharpen problem-solving skills.</p>
+                    <div class="card-links">
+                        <a href="https://cagataysavasli-jobjitsu-main-yhdmyr.streamlit.app/" target="_blank">View App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="center-btn">
+                <a href="https://github.com/CagataySavasli" target="_blank" class="btn btn-outline">More on GitHub <i class="fab fa-github"></i></a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" data-aos="fade-up">
-    <div class="container">
-      <div class="section-title">
-        <h2>Skills</h2>
-        <p>Technical proficiencies and tools I&rsquo;m proficient with.</p>
-      </div>
-      <div class="content">
-        <div class="skill"><span>Python</span><div class="progress"><div class="progress-bar" style="width: 90%"></div></div></div>
-        <div class="skill"><span>Java</span><div class="progress"><div class="progress-bar" style="width: 70%"></div></div></div>
-        <div class="skill"><span>C++</span><div class="progress"><div class="progress-bar" style="width: 60%"></div></div></div>
-        <!-- More skill bars -->
-      </div>
-    </div>
-  </section>
-  <section id="contact" data-aos="fade-up">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Connect with me on GitHub, LinkedIn, or send an Email.</p>
-      </div>
-      <div class="contact-icons">
-        <a href="https://github.com/CagataySavasli" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ahmet-cagatay-savasli-424a5a1b3" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:cagatay.savasli@ozu.edu.tr" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
-  </section>
+    <section id="publications" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <ul class="pub-list">
+                <li>
+                    <span class="pub-year">2023</span>
+                    <div class="pub-details">
+                        <strong>A.Ç. Savasli</strong>, D. Tutuncu, A.P. Ndigande, S. Ozer. <br>
+                        <em>"Performance Analysis of Meta-Learning Based Bayesian Deep Kernel Transfer Methods for Regression Tasks."</em> <br>
+                        31st IEEE Signal Processing and Communications Applications Conference (SIU).
+                    </div>
+                </li>
+                <li>
+                    <span class="pub-year">2019</span>
+                    <div class="pub-details">
+                        H. Gokay, A. Caldir, <strong>A.Ç. Savasli</strong>, et al. <br>
+                        <em>"The Comparative Analysis of the Strategies Used in Planetary Rovers' Autonomous Locomotion."</em> <br>
+                        Turkey Robotics Conference.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer data-aos="fade-in">
-    <p>&copy; 2025 Ahmet Çağatay Savaşlı. All rights reserved.</p>
-<!--    <div class="footer-download">-->
-<!--      <a href="portfolio.pdf" class="btn" download>Download PDF</a>-->
-<!--    </div>-->
-  </footer>
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://github.com/CagataySavasli" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/ahmet-cagatay-savasli" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:cagatay.savasli@ozu.edu.tr"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Ahmet Çağatay Savaşlı. Built for Science.</p>
+        </div>
+    </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('nav-list').classList.toggle('show');
-    });
-  </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
