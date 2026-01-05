@@ -10,6 +10,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .sub-role {
+            margin-top: 15px;
+            padding-left: 15px;
+            border-left: 2px solid #e2e8f0;
+        }
+        .sub-role h5 {
+            font-size: 1rem;
+            color: #334155;
+            margin-bottom: 5px;
+        }
+        .sub-role .role-date {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .sub-role p {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+        .sub-role i {
+            color: #3b82f6; /* Accent color */
+            margin-right: 8px;
+            width: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -55,7 +85,7 @@
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        I am a Teaching Assistant and M.Sc. student in Artificial Intelligence at Özyeğin University, Istanbul.
+                        I am a Research Assistant and M.Sc. student in Artificial Intelligence at Özyeğin University, Istanbul.
                         My academic focus lies at the intersection of <strong>Finance and AI</strong>, specifically utilizing Large Language Models (LLMs)
                         and Graph Representation to analyze financial documents and predict market trends.
                     </p>
@@ -89,9 +119,26 @@
                 <div class="timeline-item">
                     <div class="timeline-date">Sep 2023 - Present</div>
                     <div class="timeline-content">
-                        <h3>Researcher & M.Sc. Candidate</h3>
-                        <h4>Özyeğin University | OzU-MLFinBio Lab</h4>
-                        <p>Developing AI models leveraging LLMs for financial document analysis and predicting actions with financial implications.</p>
+                        <h3>M.Sc. Candidate in Artificial Intelligence</h3>
+                        <h4>Özyeğin University</h4>
+
+                        <div class="sub-role">
+                            <h5><i class="fas fa-microscope"></i> Researcher (OzU-MLFinBio Lab)</h5>
+                            <p>
+                                <strong>Thesis Topic:</strong> Machine Learning in Finance & Computational Finance. <br>
+                                Developing AI models leveraging LLMs for financial document analysis and predicting actions with financial implications.
+                            </p>
+                        </div>
+
+                        <div class="sub-role">
+                            <h5><i class="fas fa-chalkboard-user"></i> Teaching Assistant</h5>
+                            <p>
+                                <strong>Assisted Courses:</strong> <br>
+                                • CS 101/104: Introduction to Programming <br>
+                                • CS 201: Data Structures and Algorithms <br>
+                                • Mathematics Courses
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -101,6 +148,32 @@
                         <h3>B.Sc. in Computer Science (AI Track)</h3>
                         <h4>Özyeğin University</h4>
                         <p>Thesis: "MergerBERT: Predicting Mergers & Non-Mergers from Text via Pretrained Language Models."</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2018 - Jul 2022</div>
+                    <div class="timeline-content">
+                        <h3>Core Team Member</h3>
+                        <h4>Özyeğin University Rover Team</h4>
+
+                        <div class="sub-role">
+                            <span class="role-date">2022</span>
+                            <h5>Head of Robotic Arm Division</h5>
+                            <p>Developed algorithms for armduinos to communicate via RxTx protocol serially. Created multi-concept controlling methods for the "Hope" rover manipulator.</p>
+                        </div>
+
+                        <div class="sub-role">
+                            <span class="role-date">2019 - 2020</span>
+                            <h5>Arm Division Leader</h5>
+                            <p>Created an automated system to adapt the rover's launch file for changing USB ports, enabling operation within seconds.</p>
+                        </div>
+
+                        <div class="sub-role">
+                            <span class="role-date">2018 - 2019</span>
+                            <h5>Software Developer</h5>
+                            <p>Contributed to autonomous locomotion strategies and system integration. Ranked 8th in European Rover Challenge 2020.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -132,15 +205,6 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="card-icon"><i class="fas fa-robot"></i></div>
-                    <h3>OzU Rover Team</h3>
-                    <p>Head of Robotic Arm Division. Developed algorithms for serial communication and multi-concept controlling methods for the rover manipulator.</p>
-                    <div class="card-links">
-                        <span>Ranked 8th in ERC 2020</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
                     <div class="card-icon"><i class="fas fa-database"></i></div>
                     <h3>LazyLoader-GDELT</h3>
                     <p>Streamlit-based application for effortless downloading and filtering of GDELT data for non-coders.</p>
@@ -158,6 +222,14 @@
                     </div>
                 </div>
 
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-music"></i></div>
+                    <h3>Project APOLLO</h3>
+                    <p>Location-linked music sharing app using Yandex Music & Maps APIs. Won "Honor Team Prize Award" at Yandex Hackathon.</p>
+                    <div class="card-links">
+                        <span style="font-size: 0.9rem; color: var(--accent-color); font-weight: 600;">Hackathon Winner <i class="fas fa-trophy"></i></span>
+                    </div>
+                </div>
             </div>
             <div class="center-btn">
                 <a href="https://github.com/CagataySavasli" target="_blank" class="btn btn-outline">More on GitHub <i class="fab fa-github"></i></a>
@@ -175,6 +247,10 @@
                         <strong>A.Ç. Savasli</strong>, D. Tutuncu, A.P. Ndigande, S. Ozer. <br>
                         <em>"Performance Analysis of Meta-Learning Based Bayesian Deep Kernel Transfer Methods for Regression Tasks."</em> <br>
                         31st IEEE Signal Processing and Communications Applications Conference (SIU).
+                        <br>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TRGtXXwAAAAJ&citation_for_view=TRGtXXwAAAAJ:u-x6o8ySG0sC" target="_blank" style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: 5px; display: inline-block;">
+                            View Paper <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </li>
                 <li>
@@ -183,6 +259,10 @@
                         H. Gokay, A. Caldir, <strong>A.Ç. Savasli</strong>, et al. <br>
                         <em>"The Comparative Analysis of the Strategies Used in Planetary Rovers' Autonomous Locomotion."</em> <br>
                         Turkey Robotics Conference.
+                        <br>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TRGtXXwAAAAJ&citation_for_view=TRGtXXwAAAAJ:u5HHmVD_uO8C" target="_blank" style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: 5px; display: inline-block;">
+                            View Paper <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </li>
             </ul>
@@ -193,7 +273,7 @@
         <div class="container footer-content">
             <div class="social-links">
                 <a href="https://github.com/CagataySavasli" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/ahmet-cagatay-savasli" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/ahmet-cagatay-savasli-424a5a1b3 " target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:cagatay.savasli@ozu.edu.tr"><i class="fas fa-envelope"></i></a>
             </div>
             <p>&copy; 2025 Ahmet Çağatay Savaşlı. Built for Science.</p>
