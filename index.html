@@ -3,41 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmet Çağatay Savaşlı | AI & Computational Finance Researcher</title>
-    <meta name="description" content="Academic portfolio of Ahmet Çağatay Savaşlı, M.Sc. student in AI specializing in Computational Finance and NLP.">
+    <title>Ahmet Çağatay Savaşlı | Software Engineer & AI Researcher</title>
+    <meta name="description" content="Personal portfolio of Ahmet Çağatay Savaşlı - Software Engineer at AVL specializing in DevOps, Software Development, AI Research, and Computational Finance.">
+    <meta name="keywords" content="Ahmet Çağatay Savaşlı, Software Engineer, AVL, DevOps, Software Engineering, AI Research, Computational Finance, NLP">
+    <meta name="author" content="Ahmet Çağatay Savaşlı">
 
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Ahmet Çağatay Savaşlı | Software Engineer & AI Researcher">
+    <meta property="og:description" content="Software Engineer at AVL specializing in DevOps, internal tool development, and AI research.">
+    <meta property="og:image" content="assets/img/pp.jpeg">
+    <meta property="og:type" content="website">
+
+    <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        .sub-role {
-            margin-top: 15px;
-            padding-left: 15px;
-            border-left: 2px solid #e2e8f0;
+        :root {
+            --primary-accent: #3b82f6;
+            --primary-dark: #1e293b;
+            --bg-light-subtle: #f8fafc;
+            --text-muted: #64748b;
         }
-        .sub-role h5 {
-            font-size: 1rem;
-            color: #334155;
-            margin-bottom: 5px;
+
+        .hero-title-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
-        .sub-role .role-date {
-            font-size: 0.85rem;
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .stat-card .stat-number {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            display: block;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.78rem;
             color: #64748b;
             font-weight: 500;
-            display: block;
-            margin-bottom: 5px;
         }
-        .sub-role p {
-            font-size: 0.95rem;
+
+        .tech-stack-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .tech-badge {
+            background-color: #f1f5f9;
             color: #475569;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
         }
-        .sub-role i {
-            color: #3b82f6; /* Accent color */
-            margin-right: 8px;
-            width: 20px;
-            text-align: center;
+
+        .sub-role {
+            margin-top: 15px;
+            padding: 12px;
+            border-left: 3px solid #3b82f6;
+            background-color: #f8fafc;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 12px;
+        }
+
+        .sub-role h5 {
+            font-size: 0.98rem;
+            color: #1e293b;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sub-role .role-date {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 4px;
+            background: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .sub-role p {
+            font-size: 0.92rem;
+            color: #475569;
+            margin: 0;
+        }
+
+        .ta-courses-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .ta-course-item {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.82rem;
+            color: #334155;
+            font-weight: 500;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pub-badge {
+            display: inline-block;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .role-bullet-list {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            padding-left: 18px;
+            color: #475569;
+            font-size: 0.93rem;
+        }
+
+        .role-bullet-list li {
+            margin-bottom: 4px;
         }
     </style>
 </head>
@@ -45,10 +187,11 @@
 
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">A.Ç. Savasli</a>
+            <a href="#" class="logo">A. Çağatay Savaşlı</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li> <li><a href="#experience">Experience</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -62,15 +205,35 @@
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-text">
+                <div class="hero-title-badge">
+                    <i class="fas fa-briefcase"></i> Software Engineer @ AVL
+                </div>
                 <h1>Hi, I'm <span class="highlight">Çağatay Savaşlı</span></h1>
-                <h2>M.Sc. Student in AI & Computational Finance</h2>
+                <h2>Software Engineer & Independent AI Researcher</h2>
                 <p>
-                    Specializing in Natural Language Processing (NLP) and Machine Learning applications in the financial domain.
-                    Currently researching at Özyeğin University.
+                    Specializing in DevOps, software engineering, and AI research at AVL. Holding an M.Sc. in AI, actively continuing personal research in Computational Finance, LLMs, and Graph Analytics.
                 </p>
+                
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-outline">View Projects</a>
                     <a href="cv.pdf" target="_blank" class="btn btn-filled"><i class="fas fa-download"></i> Download CV</a>
+                    <a href="#projects" class="btn btn-outline"><i class="fas fa-laptop-code"></i> View Projects</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
+                </div>
+
+                <!-- Quick Highlights Bar -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">AVL</span>
+                        <span class="stat-label">Software Engineer</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">M.Sc.</span>
+                        <span class="stat-label">Artificial Intelligence</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Publications</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
@@ -85,89 +248,85 @@
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        I am a Research Assistant and M.Sc. student in Artificial Intelligence at Özyeğin University, Istanbul.
-                        My academic focus lies at the intersection of <strong>Finance and AI</strong>, specifically utilizing Large Language Models (LLMs)
-                        and Graph Representation to analyze financial documents and predict market trends.
+                        I am a <strong>Software Engineer at AVL</strong>, focusing on DevOps infrastructure, software application development, and leading AI research projects within corporate engineering workflows.
                     </p>
                     <p>
-                        With a background in Computer Science and hands-on experience in robotics algorithms,
-                        I aim to bridge the gap between complex data structures and actionable financial insights.
+                        I hold an M.Sc. degree in Artificial Intelligence from Özyeğin University. Having completed my formal academic tenure, I actively continue independent research exploring the intersections of <strong>Computational Finance, Large Language Models (LLMs), and Graph Representation Learning</strong>, aiming to bridge robust software engineering with cutting-edge AI technologies.
                     </p>
                 </div>
                 <div class="skills-wrapper">
                     <h3>Technical Proficiency</h3>
                     <div class="tags">
+                        <span class="tag">DevOps & CI/CD</span>
+                        <span class="tag">Software Engineering</span>
                         <span class="tag">Python</span>
-                        <span class="tag">NLP (LLMs)</span>
-                        <span class="tag">Machine Learning</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">NLP & LLMs</span>
                         <span class="tag">Computational Finance</span>
+                        <span class="tag">Graph Analytics</span>
                         <span class="tag">C++</span>
                         <span class="tag">SQL</span>
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Graph Analytics</span>
+                        <span class="tag">Streamlit</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Sep 2023 - Present</div>
-                    <div class="timeline-content">
-                        <h3>M.Sc. in Artificial Intelligence</h3>
-                        <h4>Özyeğin University</h4>
-                        <p>Specialization in Machine Learning in Finance & Computational Finance.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2017 - 2023</div>
-                    <div class="timeline-content">
-                        <h3>B.Sc. in Computer Science (AI Track)</h3>
-                        <h4>Özyeğin University</h4>
-                        <p>Thesis: "MergerBERT: Predicting Mergers & Non-Mergers from Text via Pretrained Language Models."</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
+    <section id="experience" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
 
+                <!-- Current Industry Role -->
                 <div class="timeline-item">
-                    <div class="timeline-date">Sep 2023 - Present</div>
+                    <div class="timeline-date">Jun 2026 - Present</div>
                     <div class="timeline-content">
-                        <h3>Academic Staff</h3>
+                        <h3>Software Engineer</h3>
+                        <h4>AVL</h4>
+                        <p>Driving core engineering initiatives across software operations, application development, and artificial intelligence:</p>
+                        <ul class="role-bullet-list">
+                            <li><strong>DevOps Operations:</strong> Managing and optimizing automated CI/CD pipelines, supporting system migrations, and operational workflows.</li>
+                            <li><strong>Software Development:</strong> Designing and building internal applications (inner software tools) to streamline engineering and business processes.</li>
+                            <li><strong>AI Research Projects:</strong> Conducting research and exploring practical deployments of Artificial Intelligence models and technologies.</li>
+                        </ul>
+                        <div class="tech-stack-badges">
+                            <span class="tech-badge">DevOps & CI/CD</span>
+                            <span class="tech-badge">Software Development</span>
+                            <span class="tech-badge">AI Research</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Automation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Graduate & Academic Staff Role -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2023 - Jun 2026</div>
+                    <div class="timeline-content">
+                        <h3>Academic Staff & Researcher</h3>
                         <h4>Özyeğin University</h4>
 
                         <div class="sub-role">
-                            <h5><i class="fas fa-microscope"></i> Researcher (<a href="https://ozu-mlfinbio-lab.github.io/" target="_blank" style="color: #3b82f6;">OzU-MLFinBio Lab</a>)</h5>
+                            <h5><i class="fas fa-microscope" style="color: #3b82f6;"></i> Graduate Researcher (<a href="https://ozu-mlfinbio-lab.github.io/" target="_blank" style="color: #3b82f6; text-decoration: underline;">OzU-MLFinBio Lab</a>)</h5>
                             <p>
-                                Developing AI models leveraging LLMs for financial document analysis and predicting actions with financial implications.
+                                Conducted research on AI models leveraging Large Language Models (LLMs) and Graph Neural Networks for financial document analysis and prediction tasks (Tenure completed).
                             </p>
                         </div>
 
                         <div class="sub-role">
-                            <h5><i class="fas fa-chalkboard-user"></i> Teaching Assistant</h5>
-                            <p>
-                                <strong>Assisted Courses:</strong> <br>
-                                • CS 101/104: Introduction to Programming <br>
-                                • CS 201: Data Structures and Algorithms <br>
-                                • Mathematics Courses
-                            </p>
+                            <h5><i class="fas fa-chalkboard-user" style="color: #3b82f6;"></i> Teaching Assistant</h5>
+                            <p style="margin-bottom: 6px;"><strong>Assisted Courses:</strong></p>
+                            <div class="ta-courses-list">
+                                <span class="ta-course-item"><i class="fas fa-code"></i> CS 101/104: Intro to Programming</span>
+                                <span class="ta-course-item"><i class="fas fa-diagram-project"></i> CS 201: Data Structures & Algorithms</span>
+                                <span class="ta-course-item"><i class="fas fa-calculator"></i> Applied Mathematics Courses</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Rover Team -->
                 <div class="timeline-item">
                     <div class="timeline-date">Nov 2018 - Jul 2022</div>
                     <div class="timeline-content">
@@ -177,38 +336,79 @@
                         <div class="sub-role">
                             <span class="role-date">2022</span>
                             <h5>Head of Robotic Arm Division</h5>
-                            <p>Developed algorithms for armduinos to communicate via RxTx protocol serially. Created multi-concept controlling methods for the "Hope" rover manipulator.</p>
+                            <p>Engineered serial communication protocols (RxTx) for microcontroller control. Developed multi-mode manipulation algorithms for the "Hope" rover manipulator.</p>
                         </div>
 
                         <div class="sub-role">
                             <span class="role-date">2019 - 2020</span>
                             <h5>Arm Division Leader</h5>
-                            <p>Created an automated system to adapt the rover's launch file for changing USB ports, enabling operation within seconds.</p>
+                            <p>Created an automated script adapting the rover's ROS launch file dynamically for changing USB ports, reducing setup time to seconds.</p>
                         </div>
 
                         <div class="sub-role">
                             <span class="role-date">2018 - 2019</span>
                             <h5>Software Developer</h5>
-                            <p>Contributed to autonomous locomotion strategies and system integration. Ranked 8th in European Rover Challenge 2020.</p>
+                            <p>Contributed to autonomous locomotion strategies and system integration. Ranked <strong>8th in the European Rover Challenge 2020</strong>.</p>
+                        </div>
+                        <div class="tech-stack-badges">
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">ROS</span>
+                            <span class="tech-badge">Microcontrollers</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Student Services -->
                 <div class="timeline-item">
                     <div class="timeline-date">Nov 2022 - Jun 2023</div>
                     <div class="timeline-content">
                         <h3>Student Services Support Staff</h3>
                         <h4>Özyeğin University</h4>
-                        <p>Collection, organization, and transfer of relevant data. Entering data into the system.</p>
+                        <p>Managed collection, verification, organization, and entry of operational university data into institutional systems.</p>
                     </div>
                 </div>
 
+                <!-- Internship -->
                 <div class="timeline-item">
                     <div class="timeline-date">Jul 2021 - Sep 2021</div>
                     <div class="timeline-content">
                         <h3>Software Engineer Intern</h3>
                         <h4>Nettsi Informatics Technology</h4>
-                        <p>Developed networking projects using C++, Python, and WireShark; optimized pcap file analysis reducing time by 66%.</p>
+                        <p>Developed network packet analysis tools using C++, Python, and Wireshark. Optimized pcap file parsing algorithms, achieving a <strong>66% reduction in analysis time</strong>.</p>
+                        <div class="tech-stack-badges">
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Wireshark</span>
+                            <span class="tech-badge">Networking</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2026</div>
+                    <div class="timeline-content">
+                        <h3>M.Sc. in Artificial Intelligence</h3>
+                        <h4>Özyeğin University</h4>
+                        <p>Specialized in Machine Learning in Finance, Natural Language Processing, and Computational Finance.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2017 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>B.Sc. in Computer Science (AI Track)</h3>
+                        <h4>Özyeğin University</h4>
+                        <p><strong>B.Sc. Thesis:</strong> <em>"MergerBERT: Predicting Mergers & Non-Mergers from Text via Pretrained Language Models."</em></p>
                     </div>
                 </div>
 
@@ -218,48 +418,76 @@
 
     <section id="projects" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Selected Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
 
                 <div class="project-card">
-                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>CryptoCapade</h3>
-                    <p>A user-friendly Streamlit app for cryptocurrency analysis with statistical tools and dynamic visualizations.</p>
+                    <div>
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>CryptoCapade</h3>
+                        <p>An interactive analytics web application for cryptocurrency market trends, statistical modeling, and real-time visualization.</p>
+                        <div class="tech-stack-badges" style="margin-bottom: 15px;">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">Financial Data</span>
+                        </div>
+                    </div>
                     <div class="card-links">
-                        <a href="https://cryptocapade.streamlit.app/" target="_blank">View Demo <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://cryptocapade.streamlit.app/" target="_blank" class="btn-link">View App <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="card-icon"><i class="fas fa-database"></i></div>
-                    <h3>LazyLoader-GDELT</h3>
-                    <p>Streamlit-based application for effortless downloading and filtering of GDELT data for non-coders.</p>
-                    <div class="card-links">
-                        <a href="https://lazyloader-gdelt.streamlit.app" target="_blank">View App <i class="fas fa-external-link-alt"></i></a>
+                    <div>
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
+                        <h3>LazyLoader-GDELT</h3>
+                        <p>A streamlined data ingestion platform enabling non-technical researchers to query, filter, and download GDELT global event data effortlessly.</p>
+                        <div class="tech-stack-badges" style="margin-bottom: 15px;">
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">GDELT API</span>
+                            <span class="tech-badge">Big Data</span>
+                        </div>
                     </div>
-                </div>
-
-                 <div class="project-card">
-                    <div class="card-icon"><i class="fas fa-users"></i></div>
-                    <h3>JobJitsu</h3>
-                    <p>Interactive interview preparation platform gathering brain games to sharpen problem-solving skills.</p>
                     <div class="card-links">
-                        <a href="https://cagataysavasli-jobjitsu-main-yhdmyr.streamlit.app/" target="_blank">View App <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://lazyloader-gdelt.streamlit.app" target="_blank" class="btn-link">View App <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="card-icon"><i class="fas fa-music"></i></div>
-                    <h3>Project APOLLO</h3>
-                    <p>Location-linked music sharing app using Yandex Music & Maps APIs. Won "Honor Team Prize Award" at Yandex Hackathon.</p>
+                    <div>
+                        <div class="card-icon"><i class="fas fa-brain"></i></div>
+                        <h3>JobJitsu</h3>
+                        <p>An interactive technical interview preparation suite featuring algorithmic brain teasers and problem-solving exercises.</p>
+                        <div class="tech-stack-badges" style="margin-bottom: 15px;">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">Interactive UI</span>
+                        </div>
+                    </div>
                     <div class="card-links">
-                        <span style="font-size: 0.9rem; color: var(--accent-color); font-weight: 600;">Hackathon Winner <i class="fas fa-trophy"></i></span>
+                        <a href="https://cagataysavasli-jobjitsu-main-yhdmyr.streamlit.app/" target="_blank" class="btn-link">View App <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <div class="card-icon"><i class="fas fa-music"></i></div>
+                        <h3>Project APOLLO</h3>
+                        <p>Geo-location integrated social music discovery platform combining Yandex Music and Maps APIs. Awarded first place at Yandex Hackathon.</p>
+                        <div class="tech-stack-badges" style="margin-bottom: 15px;">
+                            <span class="tech-badge">REST APIs</span>
+                            <span class="tech-badge">Geolocation</span>
+                            <span class="tech-badge">Hackathon Winner</span>
+                        </div>
+                    </div>
+                    <div class="card-links">
+                        <span style="font-size: 0.9rem; color: #2563eb; font-weight: 700;"><i class="fas fa-trophy"></i> Honor Team Prize Award</span>
                     </div>
                 </div>
 
             </div>
-            <div class="center-btn">
-                <a href="https://github.com/CagataySavasli" target="_blank" class="btn btn-outline">More on GitHub <i class="fab fa-github"></i></a>
+            <div class="center-btn" style="margin-top: 30px; text-align: center;">
+                <a href="https://github.com/CagataySavasli" target="_blank" class="btn btn-outline">Explore More Repositories on GitHub <i class="fab fa-github"></i></a>
             </div>
         </div>
     </section>
@@ -268,42 +496,68 @@
         <div class="container">
             <h2 class="section-title">Publications</h2>
             <ul class="pub-list">
+                
+                <li>
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
+                        <span class="pub-badge">ACM Conference</span><br>
+                        <strong>A.Ç. Savasli</strong>, E. Sefer, I. Karadeniz. <br>
+                        <em>"GraphXtract: Adaptive Graph-Based Sentence Selection for Resource-Efficient Lay Summarization with Large Language Models"</em> <br>
+                        <span style="color: #64748b; font-size: 0.93rem;">17th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics.</span>
+                        <br>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TRGtXXwAAAAJ&citation_for_view=TRGtXXwAAAAJ:d1gkVwhDpl0C" target="_blank" style="color: var(--primary-accent); font-weight: 600; font-size: 0.9rem; margin-top: 6px; display: inline-block;">
+                            View Paper <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </li>
+
                 <li>
                     <span class="pub-year">2023</span>
                     <div class="pub-details">
+                        <span class="pub-badge">IEEE Conference</span><br>
                         <strong>A.Ç. Savasli</strong>, D. Tutuncu, A.P. Ndigande, S. Ozer. <br>
                         <em>"Performance Analysis of Meta-Learning Based Bayesian Deep Kernel Transfer Methods for Regression Tasks."</em> <br>
-                        31st IEEE Signal Processing and Communications Applications Conference (SIU).
+                        <span style="color: #64748b; font-size: 0.93rem;">31st IEEE Signal Processing and Communications Applications Conference (SIU).</span>
                         <br>
-                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TRGtXXwAAAAJ&citation_for_view=TRGtXXwAAAAJ:u-x6o8ySG0sC" target="_blank" style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: 5px; display: inline-block;">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TRGtXXwAAAAJ&citation_for_view=TRGtXXwAAAAJ:u-x6o8ySG0sC" target="_blank" style="color: var(--primary-accent); font-weight: 600; font-size: 0.9rem; margin-top: 6px; display: inline-block;">
                             View Paper <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
                 </li>
+
                 <li>
                     <span class="pub-year">2019</span>
                     <div class="pub-details">
+                        <span class="pub-badge">National Conference</span><br>
                         H. Gokay, A. Caldir, <strong>A.Ç. Savasli</strong>, et al. <br>
                         <em>"The Comparative Analysis of the Strategies Used in Planetary Rovers' Autonomous Locomotion."</em> <br>
-                        Turkey Robotics Conference.
+                        <span style="color: #64748b; font-size: 0.93rem;">Turkey Robotics Conference (TORK).</span>
                         <br>
-                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TRGtXXwAAAAJ&citation_for_view=TRGtXXwAAAAJ:u5HHmVD_uO8C" target="_blank" style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: 5px; display: inline-block;">
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TRGtXXwAAAAJ&citation_for_view=TRGtXXwAAAAJ:u5HHmVD_uO8C" target="_blank" style="color: var(--primary-accent); font-weight: 600; font-size: 0.9rem; margin-top: 6px; display: inline-block;">
                             View Paper <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
                 </li>
+
             </ul>
         </div>
     </section>
 
     <footer id="contact">
-        <div class="container footer-content">
-            <div class="social-links">
-                <a href="https://github.com/CagataySavasli" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ahmet-cagatay-savasli-424a5a1b3 " target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:cagatay.savasli@ozu.edu.tr" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+        <div class="container footer-content" style="text-align: center; padding: 40px 0;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Get In Touch</h2>
+            <p style="color: #94a3b8; max-width: 500px; margin: 0 auto 25px auto;">
+                Open to engineering collaborations, AI software projects, and industry networking. Feel free to reach out!
+            </p>
+
+            <div class="social-links" style="margin-bottom: 25px; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://github.com/CagataySavasli" target="_blank" aria-label="GitHub" style="font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ahmet-cagatay-savasli-424a5a1b3" target="_blank" aria-label="LinkedIn" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?user=TRGtXXwAAAAJ" target="_blank" aria-label="Google Scholar" style="font-size: 1.5rem;"><i class="fas fa-graduation-cap"></i></a>
+                <a href="mailto:cagatay.savasli@ozu.edu.tr" aria-label="Send Email" style="font-size: 1.5rem;"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>&copy; 2025 Ahmet Çağatay Savaşlı. Built for Science.</p>
+
+            <p style="color: #64748b; font-size: 0.9rem;">&copy; 2026 Ahmet Çağatay Savaşlı. Built for Engineering & Science.</p>
         </div>
     </footer>
 
